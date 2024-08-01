@@ -1,6 +1,7 @@
 import './App.css';
 import { Pad } from './components/Pad';
 import React, { useState } from 'react';
+import { VolumeControl } from './components/VolumeControl';
 
 const keys = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'];
 
@@ -17,18 +18,7 @@ function App() {
     <div className="drum-machine" id='drum-machine'>
       <div id="control-container">
         <div id="display">{display}</div>
-        <div className="volume-control">
-          <label htmlFor="volume">Volume:{volume}</label>
-          <input
-            type="range"
-            id="volume"
-            min="1"
-            max="100"
-            // step="1"
-            value={volume}
-            onChange={handleVolumeChange}
-          />
-        </div>
+        <VolumeControl volume={volume} handleVolumeChange={handleVolumeChange} />
       </div>
       <div id="pad-container">
         {keys.map((item) => {
