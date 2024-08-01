@@ -31,6 +31,7 @@ export function Pad(props) {
 
   const handleClick = () => {
     if (audioRef.current){
+      audioRef.current.volume = props.volume / 100;
       audioRef.current.play().catch(error => {
       console.error("Error playing audio:", error);
       });
