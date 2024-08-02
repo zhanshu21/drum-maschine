@@ -17,7 +17,7 @@ function App() {
     <div className="drum-machine" id="drum-machine">
       <div className="instruction" id="instruction">
         <h1>Drum Machine</h1>
-        <p>Click or Press the key down to play. </p>
+        <p>Click the buttons or press the corresponding keys to play sounds. </p>
       </div>
       <div className="machine-container" id="machine-container">
         <div className="control-container" id="control-container">
