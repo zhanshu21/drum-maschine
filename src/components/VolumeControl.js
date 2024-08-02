@@ -3,7 +3,7 @@ import React from "react";
 export function VolumeControl({ volume, handleVolumeChange }) {
     return (
         <div className="volume-control">
-          <label htmlFor="volume">Volume:{volume}</label>
+          <label htmlFor="volume">Volume: {volume}</label>
           <input
             type="range"
             id="volume"

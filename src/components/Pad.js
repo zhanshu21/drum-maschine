@@ -44,6 +44,11 @@ export function Pad(props) {
     if (event.key.toUpperCase() === props.padKey) {
       // triggers a click event on the corresponding button
       buttonRef.current.click();
+      // add .active class triggers the clickEffect animation.
+      buttonRef.current.classList.add("active");
+      setTimeout(() => {
+        buttonRef.current.classList.remove("active");
+      }, 100); // Remove the active class after the animation duration
     }
   }, [props.padKey]);
 
